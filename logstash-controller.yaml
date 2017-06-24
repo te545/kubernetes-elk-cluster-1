@@ -17,10 +17,11 @@ spec:
         component: elk
         role: logstash
     spec:
+     hostNetwork: true
       serviceAccount: elk
       containers:
       - name: logstash
-        image: pires/logstash
+        image: teq545/kibana:latest
         env:
         - name: KUBERNETES_TRUST_CERT
           value: "true"
